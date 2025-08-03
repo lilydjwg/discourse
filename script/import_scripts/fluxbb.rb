@@ -296,6 +296,9 @@ class ImportScripts::FluxBB < ImportScripts::Base
     s.gsub!('[*]', '* ')
     s.gsub!('[/*]', '')
 
+    s.gsub!('[em]', '[b]')
+    s.gsub!('[/em]', '[/b]')
+
     s
   end
 
