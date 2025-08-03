@@ -64,7 +64,7 @@ class ImportScripts::FluxBB < ImportScripts::Base
   def import_users
     puts "", "creating users"
 
-    total_count = mysql_query("SELECT count(*) count FROM #{FLUXBB_PREFIX}users WHERE email like '%@%' and (num_posts != 0 or registered > 1722661304);").first["count"]
+    total_count = mysql_query("SELECT count(*) count FROM #{FLUXBB_PREFIX}users WHERE email like '%@%' AND (num_posts != 0 OR registered > 1722661304);").first["count"]
     banned_users = mysql_query("SELECT username FROM #{FLUXBB_PREFIX}bans;").map { |row| row["username"] }.to_set
 
     batches(BATCH_SIZE) do |offset|
@@ -72,9 +72,9 @@ class ImportScripts::FluxBB < ImportScripts::Base
         mysql_query(
           "SELECT id, username, realname name, url website, email email, registered created_at,
                 registration_ip registration_ip_address, last_visit last_visit_time,
-                last_email_sent last_emailed_at, location, group_id, signature bio,
+                last_email_sent last_emailed_at, location, group_id, signature bio
          FROM #{FLUXBB_PREFIX}users
-         WHERE email like '%@%' AND num_posts != 0 and (num_posts != 0 or registered > 1722661304)
+         WHERE email like '%@%' AND (num_posts != 0 OR registered > 1722661304)
          LIMIT #{BATCH_SIZE}
          OFFSET #{offset};",
         )
@@ -85,7 +85,7 @@ class ImportScripts::FluxBB < ImportScripts::Base
 
       create_users(results, total: total_count, offset: offset) do |user|
 
-        next if u["username"] in banned_users
+        next if banned_users.include? user["username"]
 
         {
           id: user["id"],
@@ -103,10 +103,10 @@ class ImportScripts::FluxBB < ImportScripts::Base
           moderator: user["group_id"] == 2,
           admin: user["group_id"] == 1,
           post_create_action:
-            proc do |user|
+            proc do |u|
               begin
-                UserAvatar.import_url_for_user("https://bbs.archlinuxcn.org/img/avatars/#{user["id"]}.png", user)
-              rescue StandardError
+                UserAvatar.import_url_for_user("https://bbs.archlinuxcn.org/img/avatars/#{user["id"]}.png", u)
+              rescue StandardError => e
                 nil
               end
             end,
@@ -203,7 +203,7 @@ class ImportScripts::FluxBB < ImportScripts::Base
         if m["id"] == m["first_post_id"]
           mapped[:category] = category_id_from_imported_category_id("child##{m["category_id"]}")
           mapped[:title] = CGI.unescapeHTML(m["title"])
-          if m["id"] in sticky_first_posts
+          if sticky_first_posts.include? m["id"]
             mapped[:pinned_at] = Time.zone.at(m["created_at"])
           end
         else
