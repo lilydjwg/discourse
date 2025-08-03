@@ -292,6 +292,7 @@ class ImportScripts::FluxBB < ImportScripts::Base
     s.gsub!(/\[img=([^\]]+)\]([^\]]+)\[\/img\]/, '![\1](\2)')
 
     s.gsub!(/\[list=[^\]]+\]/, '')
+    s.gsub!('[/list]', '')
     s.gsub!('[*]', '* ')
     s.gsub!('[/*]', '')
 
