@@ -63,7 +63,7 @@ class ImportScripts::FluxBB < ImportScripts::Base
   def import_users
     puts "", "creating users"
 
-    total_count = mysql_query("SELECT count(*) count FROM #{FLUXBB_PREFIX}users;").first["count"]
+    total_count = mysql_query("SELECT count(*) count FROM #{FLUXBB_PREFIX}users WHERE email like '%@%' and num_posts != 0;").first["count"]
 
     batches(BATCH_SIZE) do |offset|
       results =
@@ -72,6 +72,7 @@ class ImportScripts::FluxBB < ImportScripts::Base
                 registration_ip registration_ip_address, last_visit last_visit_time,
                 last_email_sent last_emailed_at, location, group_id
          FROM #{FLUXBB_PREFIX}users
+         WHERE email like '%@%' AND num_posts != 0
          LIMIT #{BATCH_SIZE}
          OFFSET #{offset};",
         )
