@@ -64,7 +64,7 @@ class ImportScripts::FluxBB < ImportScripts::Base
   def import_users
     puts "", "creating users"
 
-    total_count = mysql_query("SELECT count(*) count FROM #{FLUXBB_PREFIX}users WHERE email like '%@%' and num_posts != 0;").first["count"]
+    total_count = mysql_query("SELECT count(*) count FROM #{FLUXBB_PREFIX}users WHERE email like '%@%' and (num_posts != 0 or registered > 1722661304);").first["count"]
     banned_users = mysql_query("SELECT username FROM #{FLUXBB_PREFIX}bans;").map { |row| row["username"] }.to_set
 
     batches(BATCH_SIZE) do |offset|
@@ -74,7 +74,7 @@ class ImportScripts::FluxBB < ImportScripts::Base
                 registration_ip registration_ip_address, last_visit last_visit_time,
                 last_email_sent last_emailed_at, location, group_id, signature bio,
          FROM #{FLUXBB_PREFIX}users
-         WHERE email like '%@%' AND num_posts != 0
+         WHERE email like '%@%' AND num_posts != 0 and (num_posts != 0 or registered > 1722661304)
          LIMIT #{BATCH_SIZE}
          OFFSET #{offset};",
         )
