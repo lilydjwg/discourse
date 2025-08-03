@@ -42,7 +42,7 @@ class ImportScripts::FluxBB < ImportScripts::Base
     import_users
     import_categories
     import_posts
-    suspend_users
+    # suspend_users
   end
 
   def import_groups
@@ -65,6 +65,7 @@ class ImportScripts::FluxBB < ImportScripts::Base
     puts "", "creating users"
 
     total_count = mysql_query("SELECT count(*) count FROM #{FLUXBB_PREFIX}users WHERE email like '%@%' and num_posts != 0;").first["count"]
+    banned_users = mysql_query("SELECT username FROM #{FLUXBB_PREFIX}bans;").map { |row| row["username"] }.to_set
 
     batches(BATCH_SIZE) do |offset|
       results =
@@ -83,6 +84,9 @@ class ImportScripts::FluxBB < ImportScripts::Base
       next if all_records_exist? :users, results.map { |u| u["id"].to_i }
 
       create_users(results, total: total_count, offset: offset) do |user|
+
+        next if u["username"] in banned_users
+
         {
           id: user["id"],
           email: user["email"],
