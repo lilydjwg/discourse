@@ -97,6 +97,14 @@ class ImportScripts::FluxBB < ImportScripts::Base
           location: user["location"],
           moderator: user["group_id"] == 2,
           admin: user["group_id"] == 1,
+          post_create_action:
+            proc do |user|
+              begin
+                UserAvatar.import_url_for_user("https://bbs.archlinuxcn.org/img/avatars/#{user["id"]}.png", user)
+              rescue StandardError
+                nil
+              end
+            end,
         }
       end
 
