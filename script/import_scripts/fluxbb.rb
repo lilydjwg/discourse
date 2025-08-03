@@ -106,6 +106,8 @@ class ImportScripts::FluxBB < ImportScripts::Base
             proc do |u|
               begin
                 UserAvatar.import_url_for_user("https://bbs.archlinuxcn.org/img/avatars/#{user["id"]}.png", u)
+                UserAvatar.import_url_for_user("https://bbs.archlinuxcn.org/img/avatars/#{user["id"]}.jpg", u)
+                UserAvatar.import_url_for_user("https://bbs.archlinuxcn.org/img/avatars/#{user["id"]}.gif", u)
               rescue StandardError => e
                 nil
               end
