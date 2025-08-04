@@ -42,7 +42,7 @@ class ImportScripts::FluxBB < ImportScripts::Base
     import_users
     import_categories
     import_posts
-    # suspend_users
+    suspend_users
   end
 
   def import_groups
@@ -66,6 +66,7 @@ class ImportScripts::FluxBB < ImportScripts::Base
 
     total_count = mysql_query("SELECT count(*) count FROM #{FLUXBB_PREFIX}users WHERE email like '%@%' AND (num_posts != 0 OR registered > 1722661304);").first["count"]
     banned_users = mysql_query("SELECT username FROM #{FLUXBB_PREFIX}bans;").map { |row| row["username"] }.to_set
+    posted_banned_users = mysql_query("with buid as (select distinct u.id user_id, username from #{FLUXBB_PREFIX}bans b left join #{FLUXBB_PREFIX}users u using (username) where u.id is not null) select count(id), poster_id uid, buid.username from #{FLUXBB_PREFIX}posts p join buid on (p.poster_id = buid.user_id) group by poster_id;").map { |row| row["username"] }.to_set
 
     batches(BATCH_SIZE) do |offset|
       results =
@@ -85,7 +86,7 @@ class ImportScripts::FluxBB < ImportScripts::Base
 
       create_users(results, total: total_count, offset: offset) do |user|
 
-        next if banned_users.include? user["username"]
+        next if banned_users.include? user["username"] and not posted_banned_users.include? user["username"]
 
         {
           id: user["id"],
@@ -248,7 +249,7 @@ class ImportScripts::FluxBB < ImportScripts::Base
           failed += 1
         end
       else
-        puts "Not found: #{b["email"]}"
+        # puts "Not found: #{b["email"]}"
         failed += 1
       end
 
