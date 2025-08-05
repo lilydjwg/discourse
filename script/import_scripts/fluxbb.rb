@@ -38,9 +38,9 @@ class ImportScripts::FluxBB < ImportScripts::Base
   end
 
   def execute
-    # import_groups
+    import_groups
     import_users
-    # import_categories
+    import_categories
     import_posts
     suspend_users
   end
