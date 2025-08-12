@@ -35,7 +35,7 @@ module DiscourseChatIntegration
       end
 
       def self.generate_matrix_message(post)
-        display_name = ::DiscourseChatIntegration::Helper.formatted_display_name(post.user)
+        display_name = ::DiscourseChatIntegration::Helper.formatted_display_name(post.user).sub(/^@/, '')
 
         message = {
           msgtype: SiteSetting.chat_integration_matrix_use_notice ? "m.notice" : "m.text",
