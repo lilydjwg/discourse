@@ -32,7 +32,10 @@ module DiscourseRssPolling
     end
 
     def categories
-      @accessor.element_content(:categories).map { |c| c.content }
+      @accessor
+        .element_content(:categories)
+        .map { |c| c.content if c.respond_to?(:content) }
+        .compact
     end
 
     def image_link
