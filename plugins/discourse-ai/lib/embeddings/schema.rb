@@ -135,6 +135,36 @@ module DiscourseAi
       end
 
       def asymmetric_similarity_search(embedding, limit:, offset:)
+        if table == TOPICS_TABLE
+        age_penalty_operator = vector_def.pg_function == "<#>" ? "/" : "*"
+        builder = DB.build(<<~SQL)
+          WITH candidates AS (
+            SELECT
+              #{target_column},
+              embeddings::halfvec(#{dimensions}) AS embeddings
+            FROM
+              #{table}
+            /*join*/
+            /*where*/
+            ORDER BY
+              binary_quantize(embeddings)::bit(#{dimensions}) <~> binary_quantize('[:query_embedding]'::halfvec(#{dimensions}))
+            LIMIT :candidates_limit
+          )
+          SELECT
+            #{target_column},
+            (embeddings::halfvec(#{dimensions}) #{pg_function} '[:query_embedding]'::halfvec(#{dimensions}))
+              #{age_penalty_operator} POWER(EXTRACT(EPOCH FROM NOW() - bumped_at) / 86400 / 365 + 1, 0.5)
+             AS distance
+          FROM
+            candidates
+          JOIN
+            topics ON (candidates.topic_id = topics.id)
+          ORDER BY
+            distance
+          LIMIT :limit
+          OFFSET :offset;
+        SQL
+        else
         builder = DB.build(<<~SQL)
           WITH candidates AS (
             SELECT
@@ -158,6 +188,7 @@ module DiscourseAi
           LIMIT :limit
           OFFSET :offset;
         SQL
+        end
 
         builder.where(
           "model_id = :model_id AND strategy_id = :strategy_id",
