@@ -95,7 +95,7 @@ zh_CN:
       update_scores_help: "更新以下时间范围内所有排行榜的所有分数："
       update_range:
         last_10_days: "过去 10 天"
-        last_30_days: "过去 30 天"
+        last_30_days: "过去30天"
         last_90_days: "过去 90 天"
         last_year: "去年"
         all_time: "所有时间"

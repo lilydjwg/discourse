@@ -81,7 +81,7 @@ zh_CN:
       description: "有 50 条回复被标记为解决方案"
       long_description: "此徽章是由于 50 条回复被标记为话题的解决方案而获得的。:white_check_mark: 您真的很懂行。:clap:"
     solved_4:
-      name: "解决方案机构"
+      name: "解决方案专家"
       description: "有 150 条回复被标记为解决方案"
       long_description: "此徽章是由于 150 条回复被标记为话题的解决方案而获得的。:white_check_mark: 太棒了。:slightly_smiling_face: 您正式成为一个解决方案机构。:brain:"
   discourse_automation:
