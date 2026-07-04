@@ -59,7 +59,7 @@ zh_CN:
         label: "以百分比显示"
       remove-vote:
         title: "移除您的投票"
-        label: "撤消投票"
+        label: "撤销投票"
       hide-results:
         title: "回到您的投票"
         label: "投票"

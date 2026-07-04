@@ -1103,7 +1103,7 @@ zh_CN:
         semantic_search_results:
           toggle: "AI 结果"
           unavailable: "AI 结果不可用"
-          zero_results_expanded: "找不到任何结果，正在显示 %{count} 个 AI 结果"
+          zero_results_expanded: "找到零个结果；显示%{count}个AI搜索结果"
         semantic_search_tooltips:
           results_explanation: "启用后，将在下方添加更多 AI 搜索结果。"
           invalid_sort: "搜索结果必须按相关性排序才能显示 AI 结果"

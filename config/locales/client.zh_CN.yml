@@ -85,86 +85,86 @@ zh_CN:
         millions: "%{number}M"
     dates:
       time: "HH:mm"
-      time_short: "h:mm"
+      time_short: "H:mm"
       time_with_zone: "HH:mm (z)"
       time_short_day: "ddd, HH:mm"
-      timeline_date: "YYYY 年 MMM"
-      long_no_year: "MMM D 日 HH:mm"
-      long_no_year_no_time: "MMM D 日"
-      full_no_year_no_time: "MMMM D 日"
-      long_with_year: "YYYY 年 MMM D 日 HH:mm"
-      long_with_year_no_time: "YYYY 年 MMM D 日"
-      full_with_year_no_time: "YYYY 年 MMMM D 日"
-      long_date_with_year: "YYYY 年 MMM D 日 LT"
-      long_date_without_year: "MMM D 日 LT"
-      long_date_with_year_without_time: "YYYY 年 MMM D 日"
-      long_date_without_year_with_linebreak: "MMM D 日<br/>LT"
-      long_date_with_year_with_linebreak: "YYYY 年 MMM D 日<br/>LT"
-      wrap_ago: "%{date} 前"
+      timeline_date: "YYYY-MM"
+      long_no_year: "M月D日 HH:mm"
+      long_no_year_no_time: "M月D日"
+      full_no_year_no_time: "M月D日"
+      long_with_year: "YYYY年M月D日 HH:mm"
+      long_with_year_no_time: "YYYY年M月D日"
+      full_with_year_no_time: "YYYY年M月D日"
+      long_date_with_year: "YYYY年M月D日 LT"
+      long_date_without_year: "M月D日 LT"
+      long_date_with_year_without_time: "YYYY年M月D日"
+      long_date_without_year_with_linebreak: "M月D日<br>LT"
+      long_date_with_year_with_linebreak: "YYYY年M月D日<br>LT"
+      wrap_ago: "%{date}前"
       wrap_on: "%{date}"
       tiny:
-        half_a_minute: "< 1 分钟"
+        half_a_minute: "< 1分钟"
         less_than_x_seconds:
-          other: "< %{count} 秒"
+          other: "< %{count}秒"
         x_seconds:
-          other: "%{count} 秒"
+          other: "%{count}秒"
         less_than_x_minutes:
-          other: "< %{count} 分钟"
+          other: "< %{count}分钟"
         x_minutes:
-          other: "%{count} 分钟"
+          other: "%{count}分钟"
         x_minutes_seconds: "%{minutes}分钟 %{seconds}秒"
         about_x_hours:
-          other: "%{count} 小时"
+          other: "%{count}小时"
         x_days:
-          other: "%{count} 天"
+          other: "%{count}天"
         x_months:
-          other: "%{count} 个月"
+          other: "%{count}个月"
         about_x_years:
-          other: "%{count} 年"
+          other: "%{count}年"
         over_x_years:
-          other: "> %{count} 年"
+          other: "> %{count}年"
         almost_x_years:
-          other: "%{count} 年"
-        date_month: "MMM D 日"
-        date_year: "YYYY 年 MMM"
+          other: "%{count}年"
+        date_month: "M月D日"
+        date_year: "YYYY年M月D日"
       medium:
         less_than_x_minutes:
           other: "小于 %{count} 分钟"
         x_minutes:
-          other: "%{count} 分钟"
+          other: "%{count}分钟"
         x_hours:
-          other: "%{count} 小时"
+          other: "%{count}小时"
         about_x_hours:
-          other: "大约 %{count} 小时"
+          other: "大约%{count}小时"
         x_days:
-          other: "%{count} 天"
+          other: "%{count}天"
         x_months:
-          other: "%{count} 个月"
+          other: "%{count}个月"
         about_x_years:
-          other: "大约 %{count} 年"
+          other: "大约%{count}年"
         over_x_years:
-          other: "超过 %{count} 年"
+          other: "超过%{count}年"
         almost_x_years:
-          other: "将近 %{count} 年"
-        date_year: "YYYY 年 MMM D 日"
+          other: "将近%{count}年"
+        date_year: "YYYY年M月D日"
       medium_with_ago:
         x_minutes:
-          other: "%{count} 分钟前"
+          other: "%{count}分钟前"
         x_hours:
-          other: "%{count} 小时前"
+          other: "%{count}小时前"
         x_days:
-          other: "%{count} 天前"
+          other: "%{count}天前"
         x_months:
-          other: "%{count} 个月前"
+          other: "%{count}个月前"
         x_years:
-          other: "%{count} 年前"
+          other: "%{count}年前"
       later:
         x_days:
-          other: "%{count} 天后"
+          other: "%{count}天后"
         x_months:
-          other: "%{count} 个月后"
+          other: "%{count}个月后"
         x_years:
-          other: "%{count} 年后"
+          other: "%{count}年后"
       previous_month: "上个月"
       next_month: "下个月"
       placeholder: 日期
@@ -438,7 +438,7 @@ zh_CN:
     sign_up: "注册"
     log_in: "登录"
     age: "年龄"
-    joined: "加入日期："
+    joined: "加入于"
     admin_title: "管理员"
     advanced_mode_toggle:
       advanced_mode: "高级模式"
@@ -708,7 +708,7 @@ zh_CN:
     topic_count_categories:
       other: "查看 %{count} 个新的或更新过的话题"
     topic_count_latest:
-      other: "查看 %{count} 个新的或更新的话题"
+      other: "查看 %{count} 个新的或更新过的话题"
     topic_count_unseen:
       other: "查看 %{count} 个新的或更新过的话题"
     topic_count_unread:
@@ -1018,7 +1018,7 @@ zh_CN:
       copy_link: "复制链接"
       copy_permalink_title: "将此可评论条目的链接复制到剪贴板"
       copy_link_feedback: "链接已复制"
-      view_source: "查看来源"
+      view_source: "查看源码"
       insights:
         title: "洞察"
         flag_volume: "举报量"
@@ -1072,7 +1072,7 @@ zh_CN:
     time_shortcut:
       now: "现在"
       in_one_hour: "一小时内"
-      in_two_hours: "两小时内"
+      in_two_hours: "两小时后"
       later_today: "今天晚些时候"
       two_days: "两天"
       three_days: "三天后"
@@ -1151,7 +1151,7 @@ zh_CN:
         add_user_to_group: "添加用户"
         remove_user_from_group: "移除用户"
         make_user_group_owner: "设为所有者"
-        remove_user_as_group_owner: "撤消所有者"
+        remove_user_as_group_owner: "撤销所有者"
     groups:
       member_added: "已添加"
       member_requested: "请求日期"
@@ -1170,9 +1170,9 @@ zh_CN:
         accepted: "已接受"
         deny: "拒绝"
         denied: "已拒绝"
-        undone: "请求已撤消"
+        undone: "请求已撤销"
         handle: "处理成员资格请求"
-        undo: "撤消"
+        undo: "撤销"
       manage:
         title: "管理"
         name: "名称"
@@ -1647,8 +1647,8 @@ zh_CN:
       github_profile: "GitHub"
       email_activity_summary: "活动总结"
       mailing_list_mode:
-        label: "邮寄名单模式"
-        enabled: "启用邮寄名单模式"
+        label: "邮件列表模式"
+        enabled: "启用邮件列表模式"
         instructions: |
           此设置将替换活动总结。<br />
           已设为免打扰的话题和类别将不会被包含在这些电子邮件中。
@@ -1656,7 +1656,7 @@ zh_CN:
         individual_no_echo: "为除了我发表的新帖子之外的每个新帖子发送一封电子邮件"
         many_per_day: "每当有新帖子时都向我发送电子邮件（每天大约 %{dailyEmailEstimate} 封）"
         few_per_day: "每当有新帖子时都向我发送电子邮件（每天大约 2 封）"
-        warning: "邮寄名单模式已启用。电子邮件通知设置被覆盖。"
+        warning: "邮件列表模式已启用。电子邮件通知设置被覆盖。"
       tag_settings: "标签"
       watched_tags: "已关注"
       watched_tags_instructions: "您将自动关注带有这些标签的所有话题。您会收到所有新帖子和话题的通知，话题旁还会显示新帖子的数量。"
@@ -1680,7 +1680,7 @@ zh_CN:
       regular_categories_instructions: "您将在“最新”和“热门”话题列表中看到这些类别。"
       no_category_access: "作为版主，您具有有限的类别访问权限，保存已被禁用。"
       delete_account: "删除我的帐户"
-      delete_account_confirm: "确定要永久删除您的帐户吗？此操作无法撤消！"
+      delete_account_confirm: "确定要永久删除您的帐户吗？此操作无法撤销！"
       deleted_yourself: "您的帐户已被成功删除。"
       delete_yourself_not_allowed: "如果您希望删除您的帐户，请联系管理人员。"
       unread_message_count: "消息"
@@ -1696,8 +1696,8 @@ zh_CN:
       tracked_topics_link: "显示"
       automatically_unpin_topics: "当我到达底部时自动取消置顶话题"
       apps: "应用"
-      revoke_access: "撤消访问权限"
-      undo_revoke_access: "撤消访问权限撤消操作"
+      revoke_access: "撤销访问权限"
+      undo_revoke_access: "撤销访问权限撤销操作"
       api_approved: "已批准："
       api_last_used_at: "最后使用时间："
       api_expires_at: "过期时间:"
@@ -1717,7 +1717,7 @@ zh_CN:
         deleted_posts:
           other: '<span class="%{className}">%{count}</span> 篇删除的帖子'
         silencings:
-          other: '<span class="%{className}">%{count}</span> 人被禁言'
+          other: '被禁言<span class="%{className}">%{count}</span>次'
         suspensions:
           other: '<span class="%{className}">%{count}</span> 个封禁'
         warnings_received:
@@ -1884,9 +1884,9 @@ zh_CN:
         delete_confirm_header: "这些基于令牌的身份验证器和实体安全密钥将被删除："
         delete_confirm_instruction: "要确认，请在下面的框中输入 <strong>%{confirm}</strong>。"
         delete_single_confirm_title: "删除身份验证器"
-        delete_single_confirm_message: "您正在删除 %{name}。此操作无法撤消。如果您改变主意，则必须重新注册此身份验证器。"
+        delete_single_confirm_message: "您正在删除 %{name}。此操作无法撤销。如果您改变主意，则必须重新注册此身份验证器。"
         delete_backup_codes_confirm_title: "删除备份代码"
-        delete_backup_codes_confirm_message: "您正在删除备份代码。此操作无法撤消。如果您改变主意，则必须重新生成备份代码。"
+        delete_backup_codes_confirm_message: "您正在删除备份代码。此操作无法撤销。如果您改变主意，则必须重新生成备份代码。"
         save: "保存"
         edit: "编辑"
         edit_title: "编辑身份验证器"
@@ -1935,7 +1935,7 @@ zh_CN:
         title: "更改用户名"
         confirm: "确定要更改您的用户名吗？"
         taken: "抱歉，该用户名已被使用。"
-        invalid: "该用户名无效，用户名只能包含字母和数字"
+        invalid: "该用户名无效，用户名只能包含汉字、数字、字母、连字符、点和下划线"
       add_email:
         title: "添加电子邮件"
         add: "添加"
@@ -2009,7 +2009,7 @@ zh_CN:
       associated_accounts:
         title: "关联帐户"
         connect: "连接"
-        revoke: "撤消"
+        revoke: "撤销"
         cancel: "取消"
         not_connected: "（未连接）"
         confirm_modal_title: "关联 %{provider} 帐户"
@@ -2027,8 +2027,8 @@ zh_CN:
       name:
         title: "姓名"
         title_optional: "名称（可选）"
-        instructions: "您的全名（可选）"
-        instructions_required: "您的全名"
+        instructions: "公开显示用的全名（可选）"
+        instructions_required: "公开显示用的全名"
         required: "请输入姓名"
         too_short: "您的用户名过短"
         ok: "您的姓名没有问题"
@@ -2472,9 +2472,9 @@ zh_CN:
     feedback_with_link: "<a href='%{url}' target='_blank'>反馈…</a>"
     mute: 免打扰
     unmute: 取消免打扰
-    last_post: 发布时间
+    last_post: 最后发布于
     local_time: "当地时间"
-    time_read: 阅读
+    time_read: 阅读了
     time_read_recently: "最近 %{time_read}"
     time_read_tooltip: "总阅读时间 %{time_read}"
     time_read_recently_tooltip: "总阅读时间 %{time_read}（最近60天 %{recent_time_read}）"
@@ -3095,7 +3095,7 @@ zh_CN:
           label: "共享草稿"
           desc: "起草一个仅对允许的用户可见的话题"
         toggle_topic_bump:
-          label: "请勿顶帖"
+          label: "切换是否顶帖"
           desc: "回复但不更改最新回复日期"
         create_unlisted_topic: "取消公开话题"
         toggle_unlisted:
@@ -3361,7 +3361,7 @@ zh_CN:
           all: 包含消息
           title: 仅在标题中匹配
           likes: 我赞过
-          posted: 我发过帖
+          posted: 我发的帖
           created: 我创建
           watching: 我正在关注
           tracking: 我正在跟踪
@@ -3579,10 +3579,10 @@ zh_CN:
         hot: "没有热门话题。"
         filter: "没有话题。"
         education:
-          topic_tracking_preferences: '您可以在<a href="%{basePath}/my/preferences/tracking">您的偏好设置</a>中查看和更改新的话题跟踪设置。'
-          unread: "没有未读内容… 太棒了！"
-          unified_new: "目前没有新内容… 稍后再查看！"
-          new: "目前没有新内容… 稍后再查看！"
+          topic_tracking_preferences: '您可以在<a href="%{basePath}/my/preferences/tracking">您的偏好设置</a>中查看和更改新的主题跟踪设置。'
+          unread: "没有未读话题，好耶！"
+          unified_new: "当前没有新内容……过一会儿再来！"
+          new: "当前没有新内容……过一会儿再来！"
           generic: "这里没什么可看的… 稍后回来看看！"
     topic_bulk_actions:
       dismiss:
@@ -3860,7 +3860,7 @@ zh_CN:
       notifications:
         title: 更改您接收有关此话题的通知的频率
         reasons:
-          mailing_list_mode: "您已启用邮寄名单模式，因此您将通过电子邮件收到对此话题回复的通知。"
+          mailing_list_mode: "您已启用邮件列表模式，因此您将通过电子邮件收到对此话题回复的通知。"
           "3_10": "由于您正在关注此话题的一个标签，您将收到通知。"
           "3_10_stale": "由于您过去关注过此话题的一个标签，您将收到通知。"
           "3_6": "由于您正在关注此类别，您将收到通知。"
@@ -4169,8 +4169,8 @@ zh_CN:
       link_clicked:
         other: "链接已点击 %{count} 次"
       notice:
-        new_user: "这是 %{user} 首次发帖 - 让我们欢迎他/她加入社区吧！"
-        returning_user: "我们已经有一段时间没有看到 %{user} 了 — 他/她上次发帖是 %{time}。"
+        new_user: "这是 %{user} 首次发帖 — 欢迎这位用户加入社区！"
+        returning_user: "我们已经有一段时间没有看到 %{user} 了 — 这位用户上次发帖是%{time}。"
         custom_created_by: "（由 %{userLinkHTML} 添加）"
       unread: "帖子未读"
       has_replies:
@@ -4356,7 +4356,7 @@ zh_CN:
           hide: "隐藏修订"
           show: "显示修订"
           destroy: "删除修订"
-          destroy_confirm: "确定要删除此帖子的所有修订吗？此操作无法撤消。"
+          destroy_confirm: "确定要删除此帖子的所有修订吗？此操作无法撤销。"
           revert: "还原到修订 %{revision}"
           edit_wiki: "编辑 Wiki"
           edit_post: "编辑帖子"
@@ -4567,7 +4567,7 @@ zh_CN:
       email_in_tooltip: "您可以使用 | 字符分隔多个电子邮件地址。"
       email_in_allow_strangers: "接受来自没有帐户的匿名用户的电子邮件"
       email_in_disabled: "通过电子邮件发布新话题已被禁用。要启用通过电子邮件发布新话题，请启用 <a href='%{setting_url}'>'email in'</a> 设置。"
-      mailinglist_mirror: "类别镜像一个邮寄名单"
+      mailinglist_mirror: "类别镜像一个邮件列表"
       show_subcategory_list: "在此类别中的话题上方显示子类别列表。"
       read_only_banner: "用户无法在此类别中创建话题时的横幅文本："
       num_featured_topics: "类别页面上显示的话题数："
@@ -4760,13 +4760,13 @@ zh_CN:
         help: "此话题已被关闭并存档；不再接受新回复且无法更改"
       unpinned:
         title: "已取消置顶"
-        help: "此话题已对您取消置顶；它将以常规顺序显示"
+        help: "此话题对您取消置顶，将以常规顺序显示"
       pinned_globally:
         title: "已全站置顶"
         help: "此话题已被全站置顶；它将显示在最新话题列表及其所属类别的顶部"
       pinned:
         title: "已置顶"
-        help: "此话题已对您置顶；它将显示在所属类别的顶部"
+        help: "此话题对您置顶，将显示在所属类别的顶部"
       hot:
         title: "热门"
       unlisted:
@@ -6538,7 +6538,7 @@ zh_CN:
         never_used: 永不
         generate: "生成"
         undo_revoke: "取消撤销"
-        revoke: "撤消"
+        revoke: "撤销"
         all_users: "所有用户"
         active_keys: "有效 API 密钥"
         manage_keys: 管理密钥
@@ -6554,7 +6554,7 @@ zh_CN:
         description_placeholder: 此密钥将被如何使用？
         save: 保存
         new_key: 新建 API 密钥
-        revoked: 已撤消
+        revoked: 已撤销
         delete: 永久删除
         not_shown_again: 此密钥将不会再显示。在继续之前，请务必进行备份。
         continue: 继续
@@ -7328,7 +7328,7 @@ zh_CN:
           version: "版本："
           authors: "作者："
           creator: "创建者："
-          source_url: "来源"
+          source_url: "源码"
           enable: "启用"
           disable: "禁用"
           disabled: "此组件已被禁用。"
@@ -7474,8 +7474,8 @@ zh_CN:
           new_name: "新调色板"
           copy_name_prefix: "副本 -"
           delete_confirm: "确定要删除此调色板吗？"
-          undo: "撤消"
-          undo_title: "撤消自上次保存以来对此颜色所做的变更。"
+          undo: "撤销"
+          undo_title: "撤销自上次保存以来对此颜色所做的变更。"
           revert: "还原"
           revert_title: "将此颜色重置为 Discourse 的默认调色板。"
           primary:
@@ -7663,7 +7663,7 @@ zh_CN:
           when: "时间"
           context: "上下文"
           details: "详细信息"
-          previous_value: "上一个"
+          previous_value: "旧"
           new_value: "新"
           show: "显示"
           modal_title: "详细信息"
@@ -7684,7 +7684,7 @@ zh_CN:
             removed_suspend_user: "封禁用户（已移除）"
             removed_unsuspend_user: "取消封禁用户（已移除）"
             grant_badge: "授予徽章"
-            revoke_badge: "撤消徽章"
+            revoke_badge: "撤销徽章"
             check_email: "检查电子邮件"
             delete_topic: "删除话题"
             recover_topic: "取消删除话题"
@@ -7700,15 +7700,15 @@ zh_CN:
             removed_silence_user: "禁言用户（已移除）"
             removed_unsilence_user: "取消禁言用户（已移除）"
             grant_admin: "授予管理员权限"
-            revoke_admin: "撤消管理员权限"
+            revoke_admin: "撤销管理员权限"
             grant_moderation: "授予审核权限"
-            revoke_moderation: "撤消审核权限"
+            revoke_moderation: "撤销审核权限"
             backup_create: "创建备份"
             deleted_tag: "删除的标签"
             update_directory_columns: "更新目录列"
             deleted_unused_tags: "已被删除的未使用的标签"
             renamed_tag: "重命名的标签"
-            revoke_email: "撤消电子邮件"
+            revoke_email: "撤销电子邮件"
             lock_trust_level: "锁定信任级别"
             unlock_trust_level: "解锁信任级别"
             activate_user: "激活用户"
@@ -7744,7 +7744,7 @@ zh_CN:
             change_theme_setting: "更改主题设置"
             disable_theme_component: "禁用主题组件"
             enable_theme_component: "启用主题组件"
-            revoke_title: "撤消头衔"
+            revoke_title: "撤销头衔"
             change_title: "更改头衔"
             api_key_create: "创建 API 密钥"
             api_key_update: "更新 API 密钥"
@@ -7828,10 +7828,10 @@ zh_CN:
           click_through_rate: "CTR"
           types:
             all_search_types: "所有搜索类型"
-            header: "标头"
+            header: "页眉"
             full_page: "完整页面"
             click_through_only: "全部（仅点击后到达）"
-          header_search_results: "标头搜索结果"
+          header_search_results: "页眉搜索结果"
         logster:
           title: "错误日志"
       watched_words:
@@ -8120,11 +8120,11 @@ zh_CN:
         ip_lookup: "IP 查询"
         log_out: "退出"
         logged_out: "用户已在所有设备上退出"
-        revoke_admin: "撤消管理员权限"
+        revoke_admin: "撤销管理员权限"
         grant_admin: "授予管理员权限"
         grant_admin_success: "新管理员已被确认。"
         grant_admin_confirm: "我们已向您发送电子邮件以验证新管理员。请打开它并按照说明进行操作。"
-        revoke_moderation: "撤消审核权限"
+        revoke_moderation: "撤销审核权限"
         grant_moderation: "授予审核权限"
         unsuspend: "取消封禁"
         suspend: "封禁"
@@ -8188,7 +8188,7 @@ zh_CN:
             description: |
               <p>确定要删除 @%{username} 发布的 <b>%{post_count}</b> 个帖子吗？
 
-              <p><b>此操作无法撤消！</b></p>
+              </p><p><b>此操作无法撤销！</b></p>
 
               <p>继续输入：<code>%{text}</code></p>
             text: "删除 @%{username} 发布的帖子"
@@ -8213,7 +8213,7 @@ zh_CN:
             description: |
               <p><b>@%{username}</b> 的所有内容将被转移到 <b>%{targetUsername}</b>。在内容转移后，<b>@%{username}</b> 的帐户将被删除。</p>
 
-              <p><b>此操作无法撤消！</b></p>
+              <p><b>此操作无法撤销！</b></p>
 
               <p>要继续，请输入 <code>%{text}</code></p>
             text: "将 @%{username} 转移到 @%{targetUsername}"
@@ -8229,7 +8229,7 @@ zh_CN:
           other: "无法删除所有帖子。某些帖子的存在时间超过 %{count} 天。（delete_user_max_post_age 设置。）"
         cant_delete_all_too_many_posts:
           other: "无法删除所有帖子，因为该用户的帖子超过 %{count} 篇。(delete_all_posts_max)"
-        delete_confirm_title: "确定要删除此用户吗？此操作无法撤消！"
+        delete_confirm_title: "确定要删除此用户吗？此操作无法撤销！"
         delete_confirm: "通常最好将用户匿名而不是删除他们，以避免从现有讨论中移除内容。"
         delete_dont_block: "删除用户"
         deleting_user: "正在删除用户…"
@@ -8388,7 +8388,7 @@ zh_CN:
         revert_confirm: "确定要还原您的变更吗？"
         go_back: "返回搜索"
         recommended: "我们建议自定义以下文本以符合您的需求："
-        show_overriden: "只显示被替换"
+        show_overriden: "仅显示被覆盖的文本"
         show_outdated: "仅显示过期/无效"
         show_untranslated: "只显示未翻译的内容"
         only_show_selected_locale: "仅显示所选语言的结果"
@@ -8406,7 +8406,7 @@ zh_CN:
           new_default: "新默认值"
           dismiss: "关闭"
       settings:
-        show_overriden: "只显示被替换"
+        show_overriden: "仅显示被覆盖的设置"
         history: "查看变更历史记录"
         reset: "重置"
         none: "无"
@@ -8552,10 +8552,10 @@ zh_CN:
         save: 保存
         delete: 删除
         delete_confirm: 确定要删除此徽章吗？
-        revoke: 撤消
+        revoke: 撤销
         reason: 原因
         expand: 展开…
-        revoke_confirm: 确定要撤消此徽章吗？
+        revoke_confirm: 确定要撤销此徽章吗？
         edit_badges: 编辑徽章
         grant_badge: 授予徽章
         granted_badges: 授予的徽章
@@ -8588,7 +8588,7 @@ zh_CN:
         read_only_setting_help: "自定义文本"
         query: 徽章查询 (SQL)
         target_posts: 查询目标帖子
-        auto_revoke: 每天运行撤消查询
+        auto_revoke: 每天运行撤销查询
         show_posts: 在徽章页面上显示授予徽章的帖子
         trigger: 触发条件
         trigger_type:

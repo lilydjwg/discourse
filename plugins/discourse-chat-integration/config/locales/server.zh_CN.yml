@@ -215,12 +215,9 @@ zh_CN:
 
           *帮助*：`/discourse help`
       matrix:
-        text_message: "%{user} 在 %{title} - %{post_url} 中发帖"
+        text_message: "%{user} 创建了新帖 %{title} - %{post_url}"
         formatted_message: |
-          <b>%{user}</b> 在 <b><a href='%{post_url}'>%{title}</a></b> 中发帖
-          <blockquote>
-          %{excerpt}
-          </blockquote>
+          %{user} 创建了新帖 <a href="%{post_url}">%{title}</a>
       zulip:
         message: |
           **%{user}** 在 **[%{title}](%{post_url})** 中发帖

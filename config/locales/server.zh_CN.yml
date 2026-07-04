@@ -6,9 +6,9 @@
 
 zh_CN:
   dates:
-    short_date_no_year: "MMM D 日"
-    short_date: "YYYY 年 MMM D 日"
-    long_date: "YYYY 年 MMMM D 日 h:mma"
+    short_date_no_year: "M月D日"
+    short_date: "YYYY年M月D日"
+    long_date: "YYYY年M月D日 H:mm"
   datetime_formats: &datetime_formats
     formats:
       short: "%Y-%m-%d"
@@ -19,19 +19,21 @@ zh_CN:
       calendar_ics: "%Y%m%dT%H%M%SZ"
   date:
     month_names:
-    -
-    - 1 月
-    - 2 月
-    - 3 月
-    - 4 月
-    - 5 月
-    - 6 月
-    - 7 月
-    - 8 月
-    - 9 月
-    - 10 月
-    - 11 月
-    - 12 月
+      [
+        ~,
+        1月,
+        2月,
+        3月,
+        4月,
+        5月,
+        6月,
+        7月,
+        8月,
+        9月,
+        10月,
+        11月,
+        12月,
+      ]
     <<: *datetime_formats
   time:
     am: "上午"
@@ -82,7 +84,7 @@ zh_CN:
       screenshot_invalid_type: "主题截图必须采用以下格式之一：%{accepted_formats}。截图 %{file_name} 的格式无效。"
       screenshot_invalid_size: "主题截图必须小于 %{max_size}。截图 %{file_name} 太大。"
       screenshot_invalid_dimensions: "主题截图的最大尺寸必须为 %{max_width}x%{max_height}。截图 %{file_name} 超出了此限制。它的尺寸为 %{width}x%{height}。"
-      about_json: "导入错误：about.json 不存在或无效。确定这是一个 Discourse 主题码？"
+      about_json: "导入错误：about.json 不存在或无效。确定这是一个 Discourse 主题吗？"
       about_json_too_big: "导入错误：about.json 超过上限 %{limit}。"
       about_json_values: "about.json 包含无效值：%{errors}"
       modifier_values: "about.json 修饰符包含无效值：%{errors}"
@@ -221,7 +223,7 @@ zh_CN:
         auto_generated_email_error: "当 'precedence' 标头设置为 list、junk、bulk 或 auto_reply，或者任何其他标头包含 auto-submitted、auto-replied 或 auto-generated 时，就会发生这种情况。"
         no_body_detected_error: "当我们无法提取正文且没有附件时，就会发生这种情况。"
         no_sender_detected_error: "当我们在“发件人”标头中找不到有效的电子邮件地址时，就会发生这种情况。"
-        from_reply_by_address_error: "当“发件人”标头与回复电子邮件地址时，就会发生这种情况。"
+        from_reply_by_address_error: "当“发件人”标头与“回复到”地址匹配时，就会发生这种情况。"
         inactive_user_error: "当发件人不活跃时，就会发生这种情况。"
         silenced_user_error: "当发件人被禁言时，就会发生这种情况。"
         bad_destination_address: "当“收件人/抄送”字段中的电子邮件地址均不与已配置的传入电子邮件地址匹配时，就会发生这种情况。"
@@ -238,7 +240,7 @@ zh_CN:
     secure_uploads_placeholder: "已编辑：此网站已启用安全上传，请访问话题或点击“查看媒体”以查看附加的上传。"
     view_redacted_media: "查看媒体"
   errors: &errors
-    format: ! "%{attribute} %{message}"
+    format: "%{attribute} %{message}"
     format_with_full_message: "<b>%{attribute}</b>：%{message}"
     messages:
       invalid_locale: "%{invalid_locale} 不是一个有效的语言区域"
@@ -250,7 +252,7 @@ zh_CN:
       accepted: 必须被接受
       blank: 不能为空
       present: 必须为空
-      confirmation: ! "与 %{attribute} 不匹配"
+      confirmation: "与 %{attribute} 不匹配"
       empty: 不能为空
       equal_to: 必须等于 %{count}
       even: 必须为偶数
@@ -273,7 +275,7 @@ zh_CN:
       not_an_integer: 必须是整数
       must_all_be_positive: 必须全部为正数
       odd: 必须是奇数
-      record_invalid: ! "验证失败：%{errors}"
+      record_invalid: "验证失败：%{errors}"
       max_emojis: "不能超过 %{max_emojis_count} 个表情符号"
       emojis_disabled: "不能有表情符号"
       ip_address_already_screened: "已包含在现有规则中"
@@ -289,9 +291,9 @@ zh_CN:
       auth_overrides_username: "由于启用了 `auth_overrides_username` 设置，因此需要在身份验证服务提供商处更新用户名。"
       required: "必须存在"
     template:
-      body: ! "以下字段存在问题："
+      body: "以下字段存在问题："
       header:
-        other: ! "%{count} 个错误使得 %{model} 无法保存"
+        other: "%{count} 个错误使得 %{model} 无法保存"
     embed:
       load_from_remote: "加载该帖子时出错。"
     site_settings:
@@ -435,7 +437,7 @@ zh_CN:
       other: "其他 %{count} 个回复"
     loading: "正在加载讨论…"
     permalink: "永久链接"
-    imported_from: "这是一个从 %{link} 下的原始话题分离的讨论话题"
+    imported_from: "这是对位于 %{link} 之原始条目的讨论话题。"
     in_reply_to: "▶ %{username}"
     replies:
       other: "%{count} 个回复"
@@ -927,7 +929,7 @@ zh_CN:
     confirm: "确认"
     max_secondary_emails_error: "您已达到允许的最大辅助电子邮件数量。"
   associated_accounts:
-    revoke_failed: "无法撤销您的 %{provider_name} 帐户。"
+    revoke_failed: "无法使用 %{provider_name} 撤销您的帐户。"
     connected: "（已连接）"
   activation:
     already_done: "抱歉，此帐户确认链接不再有效。也许您的帐户已经处于有效状态？"
@@ -1073,7 +1075,7 @@ zh_CN:
     stop_watching_topic: "停止关注此话题，%{link}"
     mute_topic: "将此话题的所有通知设为免打扰，%{link}"
     unwatch_category: "停止关注%{category}中的所有话题"
-    mailing_list_mode: "关闭邮寄名单模式"
+    mailing_list_mode: "关闭邮件列表模式"
     all: "不要从 %{sitename} 向我发送任何邮件"
     different_user_description: "您当前登录的用户与我们通过电子邮件联系的用户不同。请退出，或进入匿名模式，然后重试。"
     not_found_description: "抱歉，我们找不到该订阅。可能您电子邮件中的链接太旧，已过期？"
@@ -1635,7 +1637,7 @@ zh_CN:
     delete_old_hidden_posts: "自动删除被隐藏超过 30 天的帖子。"
     default_locale: "此 Discourse 实例的默认语言。您可以在<a href='%{base_path}/admin/customize/site_texts' target='_blank'>自定义/文本</a>中替换系统生成的类别和话题的文本。"
     allow_user_locale: "允许用户选择他们自己的语言界面偏好设置"
-    set_locale_from_accept_language_header: "从网络浏览器的语言标头为匿名用户设置界面语言"
+    set_locale_from_accept_language_header: "为匿名用户从网络浏览器的语言标头设置界面语言"
     set_locale_from_cookie: "允许通过 'locale' 浏览器 Cookie 设置匿名用户的区域设置"
     set_locale_from_param: "允许通过 'tl' URL 参数设置匿名用户的语言区域，例如 ?tl=es"
     support_mixed_text_direction: "支持从左到右和从右到左混合的文本方向"
@@ -1773,7 +1775,7 @@ zh_CN:
     enable_markdown_linkify: "自动将看起来像链接的文本视为链接：www.example.com 和 https://example.com 将自动添加链接"
     markdown_linkify_tlds: "自动被视为链接的顶级网域列表"
     markdown_typographer_quotation_marks: "双引号和单引号替换对的列表"
-    post_undo_action_window_mins: "允许撤消对帖子的最近操作（例如，举报等）的分钟数。"
+    post_undo_action_window_mins: "允许撤销对帖子的最近操作（例如，举报等）的分钟数。"
     must_approve_users: '所有新用户必须等待版主或管理员批准后才能登录。（注意：启用此设置也会移除“直达话题”邀请选项）'
     invite_code: "用户必须输入此代码才能注册帐户，为空时将被忽略（不区分大小写）"
     approve_suspect_users: "将可疑用户添加到审核队列中。可疑用户已进入个人简介/网站，但没有阅读活动。"
@@ -1828,7 +1830,7 @@ zh_CN:
     send_tl2_promotion_message: "向新的信任级别 2 用户发送有关升级的消息。"
     suppress_reply_directly_below: "当帖子下方只有一个回复时，不在帖子上显示可展开的回复计数。"
     suppress_reply_directly_above: "当帖子上方只有一个回复时，不在帖子上显示可展开的“回复给”字段。"
-    remove_full_quote: "如果 (a) 引号出现在帖子的开头，(b) 是整个帖子的引号，以及 (c) 来自紧接帖子的引号，则自动删除引号。有关详细信息，请参阅<a href='https://meta.discourse.org/t/removal-of-full-quotes-from-direct-replies/106857' target='_blank'>从直接回复中移除完整引号</a>"
+    remove_full_quote: "如果引用出现在帖子的开头、是整个帖子的引用、并且来自相邻帖子的引用，则自动删除引用。有关详细信息，请参阅<a href=\"https://meta.discourse.org/t/removal-of-full-quotes-from-direct-replies/106857\" target=\"_blank\">从直接回复中移除完整引用</a>"
     suppress_reply_when_quoting: "发布引用回复时，不在帖子上显示可展开的“回复给”字段。"
     max_reply_history: "展开“回复给”字段时要展开的最大回复数"
     topics_per_period_in_top_summary: "默认热门话题总结中显示的热门话题数。"
@@ -2122,7 +2124,7 @@ zh_CN:
     num_hours_to_close_topic: "暂停话题以进行干预的小时数。"
     auto_respond_to_flag_actions: "处理举报时启用自动回复。"
     min_first_post_typing_time: "用户在第一次发帖时必须输入的最短时间，如果未达到阈值，帖子将自动进入需求审批队列。设置为 0 将禁用（不推荐）"
-    fast_typing_threshold: "用户在第一次发帖时必须输入的最短时间。如果未达到阈值，帖子将自动进入审核队列。最短时间为 1 秒，标准时间为 3 秒，最长时间为 5 秒。"
+    fast_typing_threshold: "发布第一篇帖子时，用户必须输入的最短时间（以毫秒为单位）。如果未达到该阈值，帖子将自动进入审核队列。low 为 1 秒，standard 为 3 秒，high 为 5 秒。"
     auto_silence_fast_typers_on_first_post: "自动禁言未达到 `fast typing threshold` 的用户"
     auto_silence_fast_typers_max_trust_level: "自动禁言输入过快的用户的最高信任级别"
     moderator_guide_topic: "概述您如何管理您的社区的话题。链接将在审核队列中显示，供版主和管理员使用。"
@@ -2197,7 +2199,7 @@ zh_CN:
     enable_smtp: "启用 SMTP 以发送群组消息通知。"
     email_prefix: "电子邮件主题中使用的[标签]。如果不设置，将默认为 'title'。"
     email_site_title: "用作来自网站的电子邮件发件人的网站标头。如果不设置，则默认为 'title'。如果您的 'title' 包含电子邮件发件人字符串中不允许的字符，请使用此设置。"
-    find_related_post_with_key: "仅使用“回复键”查找回复的帖子。警告：禁用此功能将允许基于电子邮件地址的用户模拟。"
+    find_related_post_with_key: "仅使用“回复键”查找回复的帖子。警告：禁用此功能将允许基于电子邮件地址的用户身份顶替。"
     minimum_topics_similar: "编辑新话题时，在呈现相似话题之前需要存在的话题数。"
     relative_date_duration: "发帖后发布日期将显示为相对（7 天）而不是绝对（2 月 20 日）的天数。"
     delete_user_max_post_age: "不允许删除第一个帖子超过 (x) 天的用户。"
@@ -2346,8 +2348,8 @@ zh_CN:
     default_email_level: "设置常规话题的默认电子邮件通知级别。"
     default_email_messages_level: "设置有人发消息给用户时的默认电子邮件通知级别"
     default_email_mailing_list_mode: "默认为每篇新帖子发送一封电子邮件。"
-    default_email_mailing_list_mode_frequency: "启用邮寄名单模式的用户默认将以频率收到电子邮件。"
-    disable_mailing_list_mode: "禁止用户启用邮寄名单模式（阻止发送任何邮寄名单电子邮件。）"
+    default_email_mailing_list_mode_frequency: "启用邮件列表模式的用户默认收到电子邮件的频率。"
+    disable_mailing_list_mode: "禁止用户启用邮件列表模式（阻止发送任何邮件列表电子邮件。）"
     default_email_previous_replies: "在电子邮件中默认包含以前的回复。"
     default_emoji_reactions: "默认收藏表情符号回应。添加最多 5 个表情符号以快速回应。"
     default_email_in_reply_to: "在电子邮件中默认包含帖子回复节选。"
@@ -2776,25 +2778,25 @@ zh_CN:
     autoclosed_topic_max_posts:
       other: "在达到 %{count} 个回复的最大限制后，此话题已被自动关闭。"
     autoclosed_enabled_days:
-      other: "此话题已在 %{count} 天后被自动关闭。不再允许新回复。"
+      other: "此话题已在%{count}天后自动关闭，不再允许回复。"
     autoclosed_enabled_hours:
       other: "此话题已在 %{count} 小时后被自动关闭。不再允许新回复。"
     autoclosed_enabled_minutes:
       other: "此话题已在 %{count} 分钟后被自动关闭。不再允许新回复。"
     autoclosed_enabled_lastpost_days:
-      other: "此话题已在最后回复的 %{count} 天后被自动关闭。不再允许新回复。"
+      other: "此话题已在最后一次回复的%{count}天后自动关闭，不再允许回复。"
     autoclosed_enabled_lastpost_hours:
       other: "此话题已在最后回复的 %{count} 小时后被自动关闭。不再允许新回复。"
     autoclosed_enabled_lastpost_minutes:
       other: "此话题已在最后回复的 %{count} 分钟后被自动关闭。不再允许新回复。"
     autoclosed_disabled_days:
-      other: "此话题已在 %{count} 天后被自动打开。"
+      other: "此话题已在%{count}天后自动打开。"
     autoclosed_disabled_hours:
       other: "此话题已在 %{count} 小时后被自动打开。"
     autoclosed_disabled_minutes:
       other: "此话题已在 %{count} 分钟后被自动打开。"
     autoclosed_disabled_lastpost_days:
-      other: "此话题已在最后回复的 %{count} 天后被自动打开。"
+      other: "此话题已在最后回复的%{count}天后自动打开。"
     autoclosed_disabled_lastpost_hours:
       other: "此话题已在最后回复的 %{count} 小时后被自动打开。"
     autoclosed_disabled_lastpost_minutes:
@@ -2897,7 +2899,7 @@ zh_CN:
     deactivated: "由于 '%{email}' 的退回电子邮件过多，已被停用。"
     deactivated_by_staff: "被管理人员停用"
     deactivated_by_inactivity:
-      other: "已在闲置 %{count} 天后被自动停用"
+      other: "已在闲置%{count}天后被自动停用"
     activated_by_staff: "被管理人员激活"
     new_user_typed_too_fast: "新用户输入过快"
     content_matches_auto_silence_regex: "内容符合自动禁言的正则表达式"
@@ -2907,7 +2909,7 @@ zh_CN:
       long:
         other: "不得超过 %{count} 个字符"
       too_long: "过长"
-      characters: "只得包含数字、字母、破折号、点和下划线"
+      characters: "只得包含汉字、数字、字母、连字符、点和下划线"
       unique: "必须唯一"
       blank: "必须存在"
       must_begin_with_alphanumeric_or_underscore: "必须以字母、数字或下划线开头"
@@ -3679,7 +3681,7 @@ zh_CN:
 
         如果 POP 电子邮件帐户有 Web UI，您可能需要登录 Web 并在那里检查您的设置。
     email_revoked:
-      title: "电子邮件已撤消"
+      title: "电子邮件已撤销"
       subject_template: "您的电子邮件地址是否正确？"
       text_body_template: |
         抱歉，我们无法通过电子邮件与您联系。我们给您发送的最后几封电子邮件都因无法投递而被全部退回。
@@ -3831,7 +3833,7 @@ zh_CN:
   unsubscribe_link_and_mail: |
     要退订这些电子邮件，请[点击此处](%{unsubscribe_url})。
   unsubscribe_mailing_list: |
-    您收到此邮件是因为您启用了邮寄名单模式。
+    您收到此邮件是因为您启用了邮件列表模式。
 
     要退订这些电子邮件，请[点击此处](%{unsubscribe_url})。
   subject_re: "回复："
@@ -4447,11 +4449,11 @@ zh_CN:
   skipped_email_log:
     exceeded_emails_limit: "超过 max_emails_per_day_per_user"
     exceeded_bounces_limit: "超过 bounce_score_threshold"
-    mailing_list_no_echo_mode: "对用户自己的帖子禁用邮寄名单通知"
+    mailing_list_no_echo_mode: "对用户自己的帖子禁用邮件列表通知"
     user_email_no_user: "找不到 ID 为 %{user_id} 的用户"
     user_email_post_not_found: "找不到 ID 为 %{post_id} 的帖子"
     user_email_anonymous_user: "用户匿名"
-    user_email_user_suspended_not_pm: "用户被封禁，不是消息"
+    user_email_user_suspended_not_pm: "用户被封禁且不是私信"
     user_email_seen_recently: "用户最近有活动"
     user_email_notification_already_read: "与此电子邮件有关的通知已被阅读"
     user_email_notification_topic_nil: "post.topic 为零"
@@ -5249,10 +5251,10 @@ zh_CN:
       truncated_file: "此文件已被截断。"
       show_original: "显示原始文件"
       requires_iframe: "查看器需要 iframe。"
-      committed: "已提交"
+      committed: "提交于"
       more_than_three_files: "文件超过三个。"
-      opened: "已打开"
-      closed: "已关闭"
+      opened: "打开于"
+      closed: "关闭于"
       commit_by: "提交者"
       comment_by: "评论者"
       review_by: "审查者"
@@ -5298,10 +5300,10 @@ zh_CN:
     webhook_deactivation_reason: "您的网络钩子已自动停用。我们收到了多个 '%{status}' HTTP 状态失败响应。"
     api_key:
       automatic_revoked:
-        other: "已被自动撤消，上次活动超过 %{count} 天前"
+        other: "已被自动撤销，上次活动超过 %{count} 天前"
       automatic_revoked_max_life:
-        other: "已被自动撤消，超过 %{count} 天前创建"
-      revoked: 已撤消
+        other: "已被自动撤销，超过 %{count} 天前创建"
+      revoked: 已撤销
       restored: 已恢复
     bulk_user_delete: "已通过批量删除操作删除"
     cli_bulk_post_delete: "通过 rake 任务批量删除"

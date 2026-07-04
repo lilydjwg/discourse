@@ -250,7 +250,7 @@ zh_CN:
       screen_reader:
         new_messages:
           other: "%{count} 条新消息"
-      no_direct_message_channels: "您还没有加入任何直接消息！"
+      no_direct_message_channels: "你还没有直接消息！"
       no_direct_message_channels_cta: "开始一个对话"
       no_public_channels: "您还没有加入任何频道！"
       no_public_channels_cta: "浏览频道"
@@ -533,7 +533,7 @@ zh_CN:
         back: "返回"
         channel_placeholder: "选择一个频道"
         channel: "频道"
-        confirm_destroy: "确定要删除此传入网络钩子吗？此操作无法撤消。"
+        confirm_destroy: "确定要删除此传入网络钩子吗？此操作无法撤销。"
         current_emoji: "当前表情符号"
         description: "描述"
         delete: "删除"
