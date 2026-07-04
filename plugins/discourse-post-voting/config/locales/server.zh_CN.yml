@@ -27,7 +27,7 @@ zh_CN:
     qa_tags: "用于对话题启用帖子投票的标签"
     post_voting_enabled: "启用帖子投票插件"
     post_voting_enable_likes_on_answers: "在“帖子投票”话题中回复时启用“点赞”按钮"
-    post_voting_undo_vote_action_window: "允许用户在“帖子投票”话题中撤消投票的分钟数（0 为不限制）"
+    post_voting_undo_vote_action_window: "允许用户在“帖子投票”话题中撤销投票的分钟数（0 为不限制）"
     post_voting_comment_limit_per_post: "每个帖子允许的评论数"
     flag_posts_voting_comments_allowed_groups: "能够举报帖子投票评论的群组"
     post_voting_comment_enabled: "启用对“帖子投票”话题中的帖子发表评论"
@@ -76,7 +76,7 @@ zh_CN:
       user_over_limit: "您不能超过您的信任级别对应的投票数。"
       already_voted: "您只能为每个问题投一次票。"
       undo_vote_action_window:
-        other: "您无法在投票后的 %{count} 分钟后撤消投票。"
+        other: "您无法在投票后的 %{count} 分钟后撤销投票。"
       one_vote_per_post: "您只能为每个帖子投一次票。"
       one_vote_per_comment: "您只能为每条评论投一次票。"
   post_voting:
