@@ -1514,7 +1514,7 @@ zh_CN:
       yaxis: "消息数量"
       description: "用户使用举报对话框发送个人消息的次数。"
     top_referrers:
-      title: "热门推荐人"
+      title: "热门推荐网站"
       xaxis: "用户"
       num_clicks: "点击数"
       num_topics: "话题"
@@ -1536,7 +1536,7 @@ zh_CN:
         entry_url: "入口网址"
         count: "访问量"
     top_referrers_by_browser_pageviews:
-      title: "热门推荐人"
+      title: "热门推荐网站"
       description: "在所选期间内，为您的论坛带来最多浏览器页面浏览量的外部网站。"
       labels:
         normalized_referrer: "推荐人"

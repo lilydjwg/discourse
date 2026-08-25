@@ -7071,9 +7071,9 @@ zh_CN:
             empty: "此期间没有国家/地区数据。"
             error: "无法加载热门国家/地区。请尝试刷新页面。"
           top_referrers:
-            title: "热门推荐人"
-            empty: "此期间没有推荐人数据。"
-            error: "无法加载热门推荐人。请尝试刷新页面。"
+            title: "热门推荐网站"
+            empty: "此期间没有推荐网站数据。"
+            error: "无法加载热门推荐网站。请尝试刷新页面。"
           top_entry_urls:
             title: "热门条目网址"
             empty: "本期间无条目 URL 数据。"
