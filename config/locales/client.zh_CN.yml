@@ -182,10 +182,10 @@ zh_CN:
       date_placeholder: "yyyy/mm/dd"
       presets:
         label: "日期范围预设"
-        last_7_days: "过去 7 天"
-        last_30_days: "过去 30 天"
-        last_3_months: "过去 3 个月"
-        last_6_months: "过去 6 个月"
+        last_7_days: "过去7天"
+        last_30_days: "过去30天"
+        last_3_months: "过去3个月"
+        last_6_months: "过去6个月"
         last_year: "去年"
     languages:
       ar:
@@ -649,7 +649,7 @@ zh_CN:
               other {{eu_formatted_number}}
           } 人来自欧盟
         periods:
-          last_7_days: "在过去 7 天"
+          last_7_days: "在过去7天"
           today: "今天"
           all_time: "所有时间"
       member_count:
@@ -7027,19 +7027,19 @@ zh_CN:
               label: "每日参与"
               tooltip: "社区每天平均点赞或发帖的成员人数。"
           comparison:
-            last_7_days: "对比过去 7 天"
-            last_30_days: "对比过去 30 天"
+            last_7_days: "对比过去7天"
+            last_30_days: "对比过去30天"
             last_3_months: "对比过去 3 个月"
             previous_period: "对比上一个期间"
         site_traffic:
           fetch_error: "无法加载网站流量。请尝试刷新页面。"
           headline:
             last_7_days:
-              other: "过去 7 天的页面浏览量为 %{formatted_count}"
+              other: "过去7天的页面浏览量为 %{formatted_count}"
             last_30_days:
-              other: "过去 30 天的页面浏览量为 %{formatted_count}"
+              other: "过去30天的页面浏览量为 %{formatted_count}"
             last_3_months:
-              other: "过去 3 个月的页面浏览量为 %{formatted_count}"
+              other: "过去3个月的页面浏览量为 %{formatted_count}"
             selected_period:
               other: "所选期间的页面浏览量为 %{formatted_count}"
           trend:
@@ -7085,8 +7085,8 @@ zh_CN:
             crawlers: "抓取工具"
           see_details: "查看详细信息"
         period:
-          last_7_days: "过去 7 天"
-          last_30_days: "过去 30 天"
+          last_7_days: "过去7天"
+          last_30_days: "过去30天"
           last_3_months: "过去 3 个月"
           custom: "自定义"
           custom_range: "%{start} – %{end}"
@@ -7102,8 +7102,8 @@ zh_CN:
               other: "在过去的 30 天内为 %{count}。"
           today: "今天"
           yesterday: "昨天"
-          last_7_days: "过去 7 天"
-          last_30_days: "过去 30 天"
+          last_7_days: "过去7天"
+          last_30_days: "过去30天"
           all_time: "所有时间"
           7_days_ago: "7 天前"
           30_days_ago: "30 天前"
