@@ -91,27 +91,28 @@ module DiscourseAi
         # even though it is represented by two code points.
         #
         # Split using grapheme clusters so multi-codepoint emoji remain intact.
-        graphemes = item_content.grapheme_clusters
-        midpoint = graphemes.size / 2
+        # graphemes = item_content.grapheme_clusters
+        # midpoint = graphemes.size / 2
 
-        first_half = graphemes.slice(0, midpoint)&.join || ""
-        second_half = (graphemes.slice(midpoint, graphemes.size - midpoint) || []).join
+        # first_half = graphemes.slice(0, midpoint)&.join || ""
+        # second_half = (graphemes.slice(midpoint, graphemes.size - midpoint) || []).join
 
-        truncation_length = 500
-        tokenizer = llm_model.tokenizer_class
+        # truncation_length = 500
+        # tokenizer = llm_model.tokenizer_class
 
-        item[:text] = [
-          tokenizer.truncate(
-            first_half,
-            truncation_length,
-            strict: SiteSetting.ai_strict_token_counting,
-          ).to_s,
-          tokenizer.truncate(
-            second_half,
-            truncation_length,
-            strict: SiteSetting.ai_strict_token_counting,
-          ).to_s,
-        ].join(" ")
+        # item[:text] = [
+        #   tokenizer.truncate(
+        #     first_half,
+        #     truncation_length,
+        #     strict: SiteSetting.ai_strict_token_counting,
+        #   ).to_s,
+        #   tokenizer.truncate(
+        #     second_half,
+        #     truncation_length,
+        #     strict: SiteSetting.ai_strict_token_counting,
+        #   ).to_s,
+        # ].join(" ")
+        item[:text] = item_content.slice(0, 1000)
 
         item
       end
