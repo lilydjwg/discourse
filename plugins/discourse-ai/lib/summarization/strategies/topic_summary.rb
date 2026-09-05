@@ -65,6 +65,7 @@ module DiscourseAi
 
           [{ type: :user, content: <<~TEXT.strip }]
             #{content_title.present? ? "The discussion title is: " + content_title + ".\n" : ""}
+            The URL_PREFIX is `/t/-/#{target.id}`.\n
             #{category_name.present? ? "Category: " + category_name + ".\n" : ""}
             #{tags.present? ? "Tags: " + tags.join(", ") + ".\n" : ""}
             Here are the posts, inside <input></input> XML tags:
