@@ -12,7 +12,7 @@ zh_CN:
           spoiler_alert: "Discourse 剧透警告"
   js:
     spoiler:
-      title: 模糊剧透
+      title: 模糊剧透内容
       label:
         show: "显示隐藏内容"
     composer:

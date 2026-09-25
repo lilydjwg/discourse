@@ -12,7 +12,7 @@ zh_CN:
           discourse_details: "Discourse 详细信息"
   js:
     details:
-      title: 隐藏详细信息
+      title: 折叠详细信息
     composer:
-      details_title: 总结
-      details_text: "此文本将被隐藏"
+      details_title: 摘要
+      details_text: "此文本将被折叠"
