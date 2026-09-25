@@ -2096,11 +2096,11 @@ zh_TW:
         resent_label: "電子郵件已發送"
         update_email: "修改電子郵件地址"
         set_primary: "設定主要電子郵件"
-        destroy: "移除電子信箱"
+        destroy: "移除電子郵件"
         add_email: "新增備用電子郵件"
         auth_override_instructions: "可以通過身份驗證服務提供商更新電子郵件。"
         no_secondary: "無次要電子郵件"
-        instructions: "從未公開"
+        instructions: "絕不會公開"
         admin_note: "注意：如果管理員使用者變更其他非管理員使用者的電子郵件，表示使用者已失去原始電子郵件帳戶的存取權，因此重設密碼電子郵件將發送到他們的新地址。在使用者完成重設密碼程序之前，使用者的電子郵件將不會更改。"
         ok: "我們將寄一封確認郵件給您。"
         required: "請輸入電子郵件地址"
@@ -2845,7 +2845,7 @@ zh_TW:
         title: "使用 LinkedIn 登入"
         sr_title: "使用 LinkedIn 登入"
       passkey:
-        name: "使用密碼登入"
+        name: "使用通行密鑰登入"
       second_factor_toggle:
         totp: "請改用身份驗證應用程式"
         backup_code: "請改用備用碼"
