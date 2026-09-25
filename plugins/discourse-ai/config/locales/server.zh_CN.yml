@@ -605,8 +605,8 @@ zh_CN:
           name: "智能日期"
           description: "支持助手的智能日期功能的默认智能体"
         markdown_table_generator:
-          name: "Markdown 表生成工具"
-          description: "支持助手生成 Markdown 表功能的默认智能体"
+          name: "Markdown 表格生成工具"
+          description: "支持助手生成 Markdown 表格功能的默认智能体"
         post_illustrator:
           name: "帖子插图创建工具"
           description: "使用可用图片生成工具生成用于帖子配图的图片"
